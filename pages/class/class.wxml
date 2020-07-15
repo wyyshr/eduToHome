@@ -1,0 +1,16 @@
+<view class="class_page">
+  <view class="menber">
+    <view class="people_item" wx:for="{{allUser}}" wx:key="id">
+      <view class="img">
+        <image class="" src="{{item.role == 0?'/img/teacher.png':'/img/parent.png'}}" mode="widthFix"/>
+      </view>
+      <view class="right">
+        <view class="name">{{item.username}}</view>
+        <view class="role">{{item.role == 0?'老师':'家长'}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="btn">
+    <view class="join" bindtap="joinClass">加入</view>
+  </view>
+</view>

@@ -1,0 +1,67 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/join/join",
+    "pages/home/home",
+    "pages/class/class",
+    "pages/notice/notice",  
+    "pages/my/my",
+    "pages/myClass/myClass", 
+    "pages/noFound/noFound",
+    "pages/pareVideoDetail/pareVideoDetail",
+    "pages/allMsg/allMsg",
+    "pages/lessionMsg/lessionMsg",
+    "pages/changeLession/changeLession",
+    "pages/joinedClass/joinedClass",
+    "pages/publish/publish",
+    "pages/sendMsg/sendMsg",
+    "pages/fillInfo/fillInfo",
+    "pages/myCollect/myCollect",
+    "pages/parentDetail/parentDetail",
+    "pages/teacherDetail/teacherDetail"
+
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#d81e06",
+    "backgroundColor": "#FFF",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "img/_home.png",
+        "selectedIconPath": "img/home.png"
+      },
+      {
+        "pagePath": "pages/myClass/myClass",
+        "text": "班级",
+        "iconPath": "img/_class.png",
+        "selectedIconPath": "img/class.png"
+      },
+      {
+        "pagePath": "pages/notice/notice",
+        "text": "通知",
+        "iconPath": "img/_notice.png",
+        "selectedIconPath": "img/notice.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "img/_my.png",
+        "selectedIconPath": "img/my.png"
+      }
+    ]
+  },
+  
+  
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

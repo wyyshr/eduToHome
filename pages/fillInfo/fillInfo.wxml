@@ -1,0 +1,36 @@
+<view class="fill_info_page">
+  <!-- 老师页 -->
+  <view class="teacher_page" wx:if="{{id == 0}}">
+    <view class="my_name">
+      姓名: 
+      <input type="text" value="{{teacherInfo.teacherName}}" placeholder="请输入您的姓名" bindinput="inpName"/>
+    </view>
+    <view class="my_phone">
+      电话: 
+      <input type="number" value="{{teacherInfo.iphone}}" placeholder="请输入手机号" bindinput="inpPhone"/>
+    </view>
+    <view class="intro_msg">
+      <text >简介: </text>
+      <textarea cols="30" rows="10" value="{{teacherInfo.intro}}" bindinput="inpTeacherMsg"></textarea>
+    </view>
+  </view>
+  <!-- 家长页 -->
+  <view class="parent_page" wx:else>
+    <view class="my_name">
+      姓名: 
+      <input type="text" value="{{parentInfo.parentName}}" placeholder="请输入您的姓名" bindinput="inpName"/>
+    </view>
+    <view class="my_phone">
+      电话: 
+      <input type="number" value="{{parentInfo.iphone}}" placeholder="请输入手机号" bindinput="inpPhone"/>
+    </view>
+    <view class="child_name">
+      孩子姓名: 
+      <input type="text" value="{{parentInfo.childName}}" placeholder="请输入您孩子的姓名" bindinput="inpChildName"/>
+    </view>
+  </view>
+  <!-- 提交信息 -->
+  <view class="btn">
+    <view class="submit" bindtap="submit">确认填写</view>
+  </view>
+</view>

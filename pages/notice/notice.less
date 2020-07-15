@@ -1,0 +1,42 @@
+page{
+  background-color: rgb(245, 245, 245);
+}
+.notice_page{
+  margin: 30rpx;
+  .msg_item navigator{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 30rpx 0;
+    margin: 30rpx 0;
+    .img{
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      image{
+        width: 70%;
+      }
+    }
+    .right{
+      flex: 2;
+      flex-direction: column;
+      .name{
+        flex: 1;
+        padding: 20rpx;
+      }
+      .time{
+        flex: 1;
+        padding: 20rpx;
+        font-size: 35rpx;
+        color: rgb(173, 173, 173);
+        width: 400rpx;
+        white-space : nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+      }
+    }
+    
+  }
+}

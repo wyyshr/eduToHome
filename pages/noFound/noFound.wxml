@@ -1,0 +1,16 @@
+<view class="detail_page">
+
+  <view class="image_nav">
+    <image class="" src="{{videoUrl[id].imgSrc}}" mode="widthFix"/>
+  </view>
+
+  <view class="title">——{{videoUrl[id].name}}——</view>
+  
+  <view class="detail_img_item" wx:for="{{videoUrl[id].detailImg}}" wx:key="*this">
+    <image class="" src="{{item}}" mode="widthFix"/>
+  </view>
+  <view class="url">
+    <view class="show_url" bindtap="showUrl" hidden="{{isShow}}">点击查看课程地址</view>
+    <text selectable hidden="{{!isShow}}">{{videoUrl[id].url}}</text>
+  </view>
+</view>

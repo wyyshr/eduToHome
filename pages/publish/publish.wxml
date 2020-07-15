@@ -1,0 +1,28 @@
+<view class="publish_page">
+  <!-- 公告输入框 -->
+  <view class="public_notice" wx:if="{{index == 1}}">
+    <view class="content">
+      <textarea name="" id="" cols="30" rows="10" placeholder="填写公告~" bindinput="input"></textarea>
+    </view>
+    <view class="btn">
+      <view class="sure" bindtap="publish">确认发布</view>
+    </view>
+  </view>
+  <!-- 上传文件 -->
+  <view class="upload_file" wx:else>
+    <view class="describe_text">
+      <textarea name="" id="" cols="30" rows="10" placeholder="填写相关描述" bindinput="describe"></textarea>
+    </view>
+    <view class="btn" wx:if="{{url == ''}}">
+      <button bindtap="chooseImage">图片</button>
+      <button bindtap="chooseVideo">视频</button>
+    </view>
+    <view class="file_nav" wx:if="{{url != ''}}">
+      <image src="{{url}}" mode="widthFix" wx:if="{{suffixName == 'png'}}"/>
+      <video class="" src="{{url}}" wx:elif="{{suffixName == 'mp4'}}"/>
+    </view>
+    <view class="btn02">
+      <view class="sure" bindtap="upload">上传</view>
+    </view>
+  </view>
+</view>

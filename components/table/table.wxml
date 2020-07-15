@@ -1,0 +1,14 @@
+<view class="table">
+  <!-- 表头 -->
+  <view class="head">
+    <view class="tr" wx:for="{{headArr}}" wx:key="id">
+      <view class="th">{{item.name}}</view>
+    </view>
+  </view>
+  <!-- 内容 -->
+  <view class="body" wx:for="{{bodyArr}}" wx:key="*this">
+    <view class="tr {{item1.value.length>1?'haslession':''}}" wx:for="{{item}}" wx:for-item="item1" wx:for-index="index1" wx:key="id"  bindtap="trClick" data-arr="{{item[index1]}}" data-index="{{index}}">
+      <view class="td">{{item1.value}}</view>
+    </view>
+  </view>
+</view>

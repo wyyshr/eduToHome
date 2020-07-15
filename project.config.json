@@ -1,0 +1,120 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.11.1",
+	"appid": "wx2d38ec0e7886efde",
+	"projectname": "eduToHome",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "加入班级页面",
+					"pathName": "pages/join/join",
+					"query": "cid=0",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "班级详情",
+					"pathName": "pages/class/class",
+					"query": "cid=0",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "主页",
+					"pathName": "pages/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "课程详情",
+					"pathName": "pages/noFound/noFound",
+					"query": "id=0",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "家长视频详情",
+					"pathName": "pages/pareVideoDetail/pareVideoDetail",
+					"query": "id=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的页面",
+					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "中间信息页面",
+					"pathName": "pages/allMsg/allMsg",
+					"query": "id=0",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的班级页面",
+					"pathName": "pages/myClass/myClass",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

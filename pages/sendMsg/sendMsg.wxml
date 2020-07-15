@@ -1,0 +1,37 @@
+<view class="send_msg_page">
+  <scroll-view class="scroll" scroll-y="true" scroll-top="{{top}}" bindscroll="scroll">
+    <view class="nav_bar">
+      <view class="msg_item" wx:for="{{message}}" wx:key="id">
+        <!-- 左侧 -->
+        <view class="left_msg" wx:if="{{item.sendName == name}}">
+          <view class="img">
+            <image class="" src="{{item.sendIcon}}" mode="widthFix" />
+          </view>
+          <view class="text_nav">
+            <view class="left">
+              <image class="" src="/img/left.png" mode="widthFix" />
+            </view>
+            <view class="text">{{item.content}}</view>
+          </view>
+        </view>
+        <!-- 右侧 -->
+        <view class="right_msg" wx:else>
+          <view class="text_nav">
+            <view class="text">{{item.content}}</view>
+            <view class="left">
+              <image class="" src="/img/right.png" mode="widthFix" />
+            </view>
+          </view>
+          <view class="img">
+            <image class="" src="{{item.sendIcon}}" mode="widthFix" />
+          </view>
+        </view>
+        <view class="send_time" wx:if="{{message[index+1].times-message[index].times>=300000}}">{{message[index+1].sendTime}}</view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="input_nav">
+    <textarea type="text" value="{{content}}" bindinput="contentInp" bindblur="startLoad" auto-height />
+    <view class="btn" bindtap="sendMsg">发送</view>
+  </view>
+</view>

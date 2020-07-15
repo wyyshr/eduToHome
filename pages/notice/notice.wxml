@@ -1,0 +1,15 @@
+<view class="notice_page">
+  <view class="msg_item" wx:for="{{historyMsg}}" wx:key="id">
+    <navigator class="" target="" url="/pages/sendMsg/sendMsg?name={{item.sendName == userInfo.nickName?item.receiveName:item.sendName}}">
+      <view class="img">
+        <image class="" src="{{item.receiveIcon == userInfo.avatarUrl?item.sendIcon:item.receiveIcon}}" mode="widthFix" />
+      </view>
+      <view class="right">
+        <view class="name">{{item.sendName == userInfo.nickName?item.receiveName:item.sendName}}</view>
+        <view class="time">{{item.sendName}}: {{item.content}}</view>
+      </view>
+    </navigator>
+  </view>
+
+
+</view>

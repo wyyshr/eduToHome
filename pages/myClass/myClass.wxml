@@ -1,0 +1,40 @@
+<view class="myClass_page">
+  <!-- 老师页 -->
+  <view class="teacher_page" wx:if="{{userId == 0}}">
+    <!-- 加入的班级列表 -->
+    <view class="joined_item" wx:for="{{classArr}}" wx:key="id">
+      <navigator url="/pages/joinedClass/joinedClass?name={{item.className}}">
+        <view class="img">
+          <image src="/img/classIcon.png" mode="widthFix" />
+        </view>
+        <view class="class_content">
+          <view class="class_name">{{item.className}}</view>
+        </view>
+      </navigator>
+    </view>
+    <view class="btn">
+      <navigator url="/pages/join/join">
+        <view class="creat_class">创建/加入班级</view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 家长页 -->
+  <view class="parent_page" wx:else>
+    <!-- 加入的班级列表 -->
+    <view class="joined_item" wx:for="{{classArr}}" wx:key="id">
+      <navigator url="/pages/joinedClass/joinedClass?name={{item.className}}">
+        <view class="img">
+          <image src="/img/classIcon.png" mode="widthFix" />
+        </view>
+        <view class="class_content">
+          <view class="class_name">{{item.className}}</view>
+        </view>
+      </navigator>
+    </view>
+    <view class="btn">
+      <navigator url="/pages/join/join?cid={{userId}}">
+        <view class="join_class">加入班级</view>
+      </navigator>
+    </view>
+  </view>
+</view>

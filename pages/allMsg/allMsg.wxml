@@ -1,0 +1,50 @@
+<view class="allMsg_page">
+  <!-- 班级页 -->
+  <view class="class_msg_page" wx:if="{{id == 0}}">
+    <view class="class_item" wx:for="{{classArr}}" wx:key="id">
+      <navigator url="/pages/class/class?cname={{item.className}}">
+        <view class="img">
+          <image src="/img/classIcon.png" mode="widthFix" />
+        </view>
+        <view class="right">
+          <view class="title">{{item.className}}</view>
+          <view class="num">
+            <view class="teach_num">老师：2</view>
+            <view class="paren_num">家长：20</view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 老师页 -->
+  <view class="teacher_msg_page" wx:elif="{{id == 1}}">
+    <view class="teach_item" wx:for="{{teacherArr}}" wx:key="id">
+      <navigator url="/pages/teacherDetail/teacherDetail?name={{item.username}}">
+        <view class="teacher_icon">
+          <image src="/img/teacher.png" mode="widthFix" />
+        </view>
+        <view class="msg">
+          <view class="name">{{item.username}}</view>
+          <view class="phone">
+            <text class="iconfont icon-shouji"></text>
+            {{item.phone?'item.phone':'暂无电话'}}</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 资料页 -->
+  <view class="message_page" wx:elif="{{id == 2}}">
+    <view class="msg_item" wx:for="{{allMsgArr}}" wx:key="name">
+      <navigator url="{{item.id<7?'/pages/noFound/noFound?id='+(item.id-1):'/pages/pareVideoDetail/pareVideoDetail?id='+(item.id-6)}}">
+        <view class="img">
+          <image class="" src="{{item.path}}" mode="widthFix" />
+        </view>
+        <view class="title">{{item.name}}</view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 更多页 -->
+  <view class="more_page" wx:else>
+    <text>暂时没有更多信息~~</text>
+  </view>
+</view>

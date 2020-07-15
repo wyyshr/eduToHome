@@ -1,0 +1,122 @@
+page {
+  background-color: rgb(245, 245, 245);
+  padding: 50rpx 0;
+}
+
+.fill_info_page {
+  background-color: #fff;
+
+  // 老师
+  .teacher_page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 800rpx;
+
+    .my_name {
+      flex: 1;
+      display: flex;
+      border-bottom: 1px solid rgb(245, 245, 245);
+      padding: 30rpx;
+      align-items: center;
+
+      input {
+        margin-left: 30rpx;
+      }
+    }
+
+    .my_phone {
+      flex: 1;
+      display: flex;
+      border-bottom: 1px solid rgb(245, 245, 245);
+      padding: 30rpx;
+      align-items: center;
+
+      input {
+        margin-left: 30rpx;
+      }
+    }
+
+    .intro_msg {
+      flex: 1;
+      display: flex;
+      border-bottom: 1px solid rgb(245, 245, 245);
+      padding: 30rpx;
+
+      text{
+        flex: 1;
+        padding-top: 30rpx;
+      }
+      textarea {
+        flex: 5;
+        padding: 30rpx 10rpx;
+      }
+    }
+
+  }
+
+  // 家长
+  .parent_page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 600rpx;
+
+    .my_name {
+      flex: 1;
+      display: flex;
+      border-bottom: 1px solid rgb(245, 245, 245);
+      padding: 30rpx;
+      align-items: center;
+
+      input {
+        margin-left: 30rpx;
+      }
+    }
+
+    .my_phone {
+      flex: 1;
+      display: flex;
+      border-bottom: 1px solid rgb(245, 245, 245);
+      padding: 30rpx;
+      align-items: center;
+
+      input {
+        margin-left: 30rpx;
+      }
+    }
+
+    .child_name {
+      flex: 1;
+      display: flex;
+      border-bottom: 1px solid rgb(245, 245, 245);
+      padding: 30rpx;
+      align-items: center;
+
+      input {
+        margin-left: 30rpx;
+      }
+    }
+
+  }
+
+  .btn {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+
+    .submit {
+      width: 500rpx;
+      text-align: center;
+      height: 100rpx;
+      line-height: 100rpx;
+      background-color: rgb(255, 100, 100);
+      color: #fff;
+      border-radius: 20rpx;
+      margin: 30rpx auto;
+      font-size: 44rpx;
+      font-weight: 700;
+    }
+  }
+}

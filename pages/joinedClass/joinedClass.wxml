@@ -1,0 +1,151 @@
+<!-- 老师页 -->
+<view class="joined_page" wx:if="{{userId == 0}}">
+  <!-- 顶部tabbar -->
+  <view class="top">
+    <tabs tabItems="{{tabItems1}}" bindtabClick="tabClick1"></tabs>
+  </view>
+  <!-- 班级课表 -->
+  <view class="class_lession_schedule" wx:if="{{index1 == 0}}">
+    <view class="content">
+      <table detailArr="{{detailArr}}" bind:tableClick="tableClick1"></table>
+    </view>
+  </view>
+  <!-- 班级公告 -->
+  <view class="class_public_notice_tab" wx:elif="{{index1 == 1}}">
+    <view class="public_notice_item" wx:for="{{classPublic}}" 
+    wx:key="id" style="{{item.id == publicId?'margin-left: '+(move>0?-move*2.5:0)+'rpx;':''}}" 
+    bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" data-id="{{item.id}}">
+      <view class="left">
+        <view class="content">{{item.content}}</view>
+        <view class="bottom">
+          <!-- <view class="name">张三</view> -->
+          <view class="date">{{item.noticeTime}}</view>
+        </view>
+      </view>
+      <view class="delete" bindtap="delete" data-id="{{item.id}}">删除</view>
+    </view>
+    <view class="btn">
+      <navigator url="/pages/publish/publish?id={{index1}}&className={{className}}">
+        <view class="publish">发布公告</view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 班级资料 -->
+  <view class="class_public_data_tab" wx:elif="{{index1 == 2}}">
+    <view class="data_item" wx:for="{{pubMsg}}" wx:key="id">
+      <view class="left">
+        <image src="{{item.iconUrl}}" mode="widthFix" />
+      </view>
+      <view class="right">
+        <view class="name">
+          <text>{{item.username}}</text>
+          <view class="collect iconfont {{item.status == 1?'icon-shoucang1':'icon-shoucang'}}" 
+          bindtap="collect" data-obj="{{item}}"></view>
+        </view>
+        <view class="content">
+          <text >{{item.dataContent}}</text>
+          <view class="img" wx:if="{{item.suffixName == 'png'}}">
+            <image src="{{item.suffixName == 'png'?item.url:''}}" mode="widthFix"/>
+          </view>
+          <view class="video" wx:elif="{{item.suffixName == 'mp4'}}">
+            <video class="" src="{{item.suffixName == 'mp4'?item.url:''}}" />
+          </view>
+          <view class="time">{{item.dataTime}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="btn">
+      <navigator url="/pages/publish/publish?id={{index1}}&className={{className}}">
+        <view class="upload">上传资料</view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 班级家长 -->
+  <view class="class_parent_tab" wx:else>
+    <view class="parent_item" wx:for="{{parentArr}}" wx:key="id">
+      <navigator url="/pages/parentDetail/parentDetail?name={{item.username}}&url={{item.iconUrl}}">
+        <view class="teacher_icon">
+          <image src="{{item.iconUrl}}" mode="widthFix" />
+        </view>
+        <view class="msg">
+          <view class="name">{{item.username}}</view>
+        </view>
+      </navigator>
+    </view>
+    <view class="btn">
+      <view class="delete_class" bindtap="quitClass">退出班级</view>
+    </view>
+  </view>
+</view>
+<!-- 家长页 -->
+<view class="joined_page_2" wx:else>
+  <!-- 顶部tabbar -->
+  <view class="top">
+    <tabs tabItems="{{tabItems2}}" bindtabClick="tabClick2"></tabs>
+  </view>
+  <!-- 班级课表 -->
+  <view class="class_lession_schedule" wx:if="{{index2 == 0}}">
+    <!-- 课表 -->
+    <view class="content">
+      <table detailArr="{{detailArr}}" bind:tableClick="tableClick2"></table>
+    </view>
+  </view>
+  <!-- 班级公告 -->
+  <view class="class_public_notice_tab" wx:elif="{{index2 == 1}}">
+    <!-- 公告 -->
+    <view class="notice">
+      <view class="public_notice_item" wx:for="{{classPublic}}" wx:key="id">
+        <view class="content">{{item.content}}</view>
+        <view class="bottom">
+          <!-- <view class="name">张三</view> -->
+          <view class="date">{{item.noticeTime}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 班级资料 -->
+  <view class="class_public_data_tab" wx:elif="{{index2 == 2}}">
+    <view class="data_item" wx:for="{{pubMsg}}" wx:key="id">
+      <view class="left">
+        <image src="{{item.iconUrl}}" mode="widthFix" />
+      </view>
+      <view class="right">
+        <view class="name">
+          <text>{{item.username}}</text>
+          <view class="collect iconfont {{item.status == 1?'icon-shoucang1':'icon-shoucang'}}" 
+          bindtap="collect" data-obj="{{item}}"></view>
+        </view>
+        <view class="content">
+          <text >{{item.dataContent}}</text>
+          <view class="img" wx:if="{{item.suffixName == 'png'}}">
+            <image src="{{item.suffixName == 'png'?item.url:''}}" mode="widthFix"/>
+          </view>
+          <view class="video" wx:elif="{{item.suffixName == 'mp4'}}">
+            <video class="" src="{{item.suffixName == 'mp4'?item.url:''}}" />
+          </view>
+          <view class="time">{{item.dataTime}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 班级老师 -->
+  <view class="class_teacher_tab" wx:else>
+    <view class="teach_item" wx:for="{{teacherArr}}" wx:key="id">
+      <navigator url="/pages/teacherDetail/teacherDetail?name={{item.username}}&url={{item.iconUrl}}">
+        <view class="teacher_icon">
+          <image src="{{item.iconUrl}}" mode="widthFix" />
+        </view>
+        <view class="msg">
+          <view class="name">{{item.username}}</view>
+          <!-- <view class="phone">
+            <text class="iconfont icon-shouji"></text>
+            12345678910
+          </view> -->
+        </view>
+      </navigator>
+    </view>
+    <view class="btn">
+      <view class="quit_class" bindtap="quitClass">退出班级</view>
+    </view>
+  </view>
+</view>

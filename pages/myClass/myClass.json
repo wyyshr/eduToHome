@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "tabs": "../../components/tabs/tabs",
+    "table": "../../components/table/table"
+  },
+  "navigationBarTitleText": "班级"
+}

@@ -1,0 +1,24 @@
+<view class="class_public_data_tab" wx:if="{{pubMsg.length > 0}}">
+  <view class="data_item" wx:for="{{pubMsg}}" wx:key="id">
+    <view class="left">
+      <image src="{{item.iconUrl}}" mode="widthFix" />
+    </view>
+    <view class="right">
+      <view class="name">
+        <text>{{item.collectName}}</text>
+        <view class="collect iconfont icon-shoucang1" bindtap="collect" data-obj="{{item}}"></view>
+      </view>
+      <view class="content">
+        <text>{{item.dataContent}}</text>
+        <view class="img" wx:if="{{item.suffixName == 'png'}}">
+          <image src="{{item.suffixName == 'png'?item.url:''}}" mode="widthFix" />
+        </view>
+        <view class="video" wx:elif="{{item.suffixName == 'mp4'}}">
+          <video class="" src="{{item.suffixName == 'mp4'?item.url:''}}" />
+        </view>
+        <view class="time">{{item.dataTime}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="else" wx:else>您还未收藏~</view>

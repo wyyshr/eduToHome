@@ -1,0 +1,75 @@
+page {
+  background-color: rgb(245, 245, 245);
+}
+
+.teacher_detail_page {
+  .top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200rpx;
+    background-color: #fff;
+    margin: 30rpx 0;
+
+    .teacher_icon {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      image {
+        width: 70%;
+      }
+    }
+
+    .username {
+      flex: 3;
+      text-align: center;
+    }
+  }
+
+  .msg {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 550rpx;
+    padding: 20rpx 30rpx;
+
+    .name {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    .phone {
+      flex: 1;
+      display: flex;
+      align-items: center;
+
+    }
+
+    .personal_msg {
+      flex: 3;
+      margin-top: 30rpx;
+    }
+  }
+
+  .btn navigator{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    .send {
+      text-align: center;
+      height: 100rpx;
+      line-height: 100rpx;
+      font-weight: 800;
+      font-size: 40rpx;
+      background-color: rgb(255, 100, 100);
+      color: #fff;
+      border-radius: 20rpx;
+      margin: 30rpx 50rpx;
+    }
+  }
+}

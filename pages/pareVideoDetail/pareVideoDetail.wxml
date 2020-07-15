@@ -1,0 +1,10 @@
+<view class="detail_page">
+  <view class="video">
+    <video class="" src="{{video.path}}" />
+    <view class="text">——{{video.name}}——</view>
+  </view>
+  <view class="img">
+    <image class="" src="{{video.img1}}" mode="widthFix"/>
+    <image class="" src="{{video.img2}}" mode="widthFix" wx:if="{{video.img2 != null}}"/>
+  </view>
+</view>

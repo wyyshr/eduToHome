@@ -1,0 +1,25 @@
+<view class="index_page" hidden="{{isShow}}">
+  <!-- 选择身份 -->
+  <view class="choose">
+    <view class="title">请选择您的身份</view>
+    <radio-group bindchange="radioChange">
+      <label class="teachers" bindtap="teacherChoose">
+        <image class="" src="/img/teacher.png" mode="widthFix" />
+        <text class="text">老师</text>
+        <radio checked="{{isChoose}}" value="0" />
+      </label>
+      <label class="parents" bindtap="parentChoose">
+        <image class="" src="/img/parent.png" mode="widthFix" />
+        <text class="text">家长</text>
+        <radio checked="{{!isChoose}}" value="1" />
+      </label>
+    </radio-group>
+  </view>
+  <!-- <view class="phone">
+    <input placeholder="请输入手机号" bindinput="inputPhoneNum" type="number" />
+  </view> -->
+  <!-- 下一步 -->
+  <view class="next">
+    <button class="next_txt" bindgetuserinfo="getUserInfo" open-type="getUserInfo">下一步</button>
+  </view>
+</view>

@@ -1,0 +1,63 @@
+<view class="home_page">
+  <!-- 老师页面 -->
+  <view class="teacher_page" wx:if="{{userId == 0}}">
+    <!-- 轮播图 -->
+    <view class="swiper_nav">
+      <swiper indicator-dots="true" autoplay="true" circular="true">
+        <swiper-item wx:for="{{teacherImgArr}}" wx:key="id">
+          <navigator target="" url="/pages/noFound/noFound?id={{item.id}}">
+            <view class="image_bar">
+              <image src="{{item.src}}" mode="widthFix" />
+            </view>
+          </navigator>
+        </swiper-item>
+      </swiper>
+    </view>
+    <!-- 中部 -->
+    <view class="bottom_bar">
+      <view class="video_item" wx:for="{{parentVideos}}" wx:key="id">
+        <navigator url="/pages/pareVideoDetail/pareVideoDetail?id={{item.id}}">
+          <view class="img_nav">
+            <image class="" src="{{item.path}}" mode="widthFix" />
+          </view>
+          <view class="name_nav">{{item.name}}</view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <!-- 家长页面 -->
+  <view class="parent_page" wx:else>
+    <!-- 轮播图 -->
+    <view class="swiper_nav">
+      <swiper indicator-dots="true" autoplay="true" circular="true">
+        <swiper-item wx:for="{{parentImgArr}}" wx:key="id">
+          <navigator url="/pages/noFound/noFound?id={{item.id}}">
+            <view class="image_bar">
+              <image src="{{item.src}}" mode="widthFix" />
+            </view>
+          </navigator>
+        </swiper-item>
+      </swiper>
+    </view>
+    <!-- 中部 -->
+    <view class="middle_bar">
+      <view class="icon_item" wx:for="{{parentIconArr}}" wx:key="id">
+        <navigator url="/pages/allMsg/allMsg?id={{item.id}}">
+          <image class="" src="{{item.src}}" mode="widthFix" />
+          <view class="text">{{item.name}}</view>
+        </navigator>
+      </view>
+    </view>
+    <!-- 底部 -->
+    <view class="bottom_bar">
+      <view class="video_item" wx:for="{{parentVideos}}" wx:key="id">
+        <navigator url="/pages/pareVideoDetail/pareVideoDetail?id={{item.id}}">
+          <view class="img_nav">
+            <image class="" src="{{item.path}}" mode="widthFix" />
+          </view>
+          <view class="name_nav">{{item.name}}</view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>

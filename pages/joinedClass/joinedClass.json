@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "table": "../../components/table/table",
+    "tabs": "../../components/tabs/tabs"
+  }
+}

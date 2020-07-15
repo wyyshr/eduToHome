@@ -1,0 +1,406 @@
+page {
+  background-color: rgb(245, 245, 245);
+}
+
+.joined_page {
+  padding-top: 100rpx;
+
+  .top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  // 课表
+  .class_lession_schedule {
+    margin: 0;
+  }
+
+  // 公告
+  .class_public_notice_tab {
+    padding-top: 20rpx;
+    padding-bottom: 200rpx;
+
+    .public_notice_item {
+      display: flex;
+      justify-content: center;
+      // height: 200rpx;
+      background-color: #fff;
+      margin: 30rpx 0;
+      width: 120%;
+      // transition: all 0.0000001s;
+
+      .left {
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .content {
+          flex: 3;
+          font-size: 45rpx;
+          margin: 30rpx 50rpx;
+          width: 650rpx;
+          word-wrap:break-word
+
+        }
+
+        .bottom {
+          flex: 1;
+          display: flex;
+          margin: 30rpx;
+
+          .date {
+            color: rgb(179, 179, 179);
+            padding: 0 20rpx;
+          }
+        }
+      }
+
+      .delete {
+        flex: 1;
+        font-weight: 800;
+        font-size: 40rpx;
+        background-color: rgb(255, 100, 100);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .btn {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+
+      .publish {
+        text-align: center;
+        height: 100rpx;
+        line-height: 100rpx;
+        font-weight: 800;
+        font-size: 40rpx;
+        background-color: rgb(255, 100, 100);
+        color: #fff;
+        border-radius: 20rpx;
+        margin: 30rpx 50rpx;
+      }
+    }
+  }
+
+  // 资料
+  .class_public_data_tab {
+    margin: 30rpx;
+    padding-bottom: 200rpx;
+
+    .data_item {
+      background-color: #fff;
+      display: flex;
+      padding: 30rpx;
+      border-bottom: 1px solid rgb(245, 245, 245);
+      .left{
+        flex: 1;
+        width: 100%;
+        image{
+          width: 80%;
+        }
+      }
+      .right{
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+        .name{
+          display: flex;
+          justify-content: flex-end;
+          text{
+            color: rgb(88,107,149);
+            font-weight: 600;
+            flex: 6;
+          }
+          .collect{
+            flex: 0.7;
+            text-align: center;
+            color: #d81e06;
+            font-size: 60rpx;
+          }
+        }
+        .content{
+          display: flex;
+          flex-direction: column;
+          text{
+            margin: 20rpx 0;
+          }
+          .img{
+            image{
+              width: 100%;
+            }
+          }
+          .video{
+            video{
+              width: 100%;
+              position: relative;
+              z-index: 0;
+            }
+          }
+          .time{
+            color: rgb(175, 175, 175);
+            margin-top: 30rpx;
+          }
+        }
+      }
+    }
+
+    .btn {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgb(245, 245, 245);
+
+      .upload {
+        text-align: center;
+        height: 100rpx;
+        line-height: 100rpx;
+        font-weight: 800;
+        font-size: 40rpx;
+        background-color: rgb(255, 100, 100);
+        color: #fff;
+        border-radius: 20rpx;
+        margin: 30rpx 50rpx;
+      }
+    }
+  }
+
+  // 班级家长
+  .class_parent_tab{
+    margin: 30rpx;
+    padding-bottom: 200rpx;
+    .parent_item navigator{
+      display: flex;
+      height: 200rpx;
+      background-color: #fff;
+      border-radius: 30rpx;
+      margin-bottom: 30rpx;
+      .teacher_icon{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        image{
+          width: 70%;
+        }
+      }
+      .msg{
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        .name{
+          flex: 1;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+    .btn{
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgb(245, 245, 245);
+      .delete_class{
+        text-align: center;
+        height: 100rpx;
+        line-height: 100rpx;
+        font-weight: 800;
+        font-size: 40rpx;
+        background-color: rgb(255, 100, 100);
+        color: #fff;
+        border-radius: 20rpx;
+        margin: 30rpx 50rpx;
+      }
+    }
+  }
+}
+
+.joined_page_2 {
+  padding-top: 100rpx;
+
+  // 顶部tabbar
+  .top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  // 班级课表
+  .class_lession_schedule {
+
+    .content {
+      background-color: #fff;
+    }
+
+  }
+
+  // 班级公告
+  .class_public_notice_tab {
+    .notice {
+      .public_notice_item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // height: 200rpx;
+        background-color: #fff;
+        margin: 30rpx 0;
+        width: 100%;
+        // transition: all 0.000001s;
+
+        .content {
+          flex: 3;
+          font-size: 45rpx;
+          margin: 30rpx 50rpx;
+          width: 650rpx;
+          word-wrap:break-word
+
+        }
+
+        .bottom {
+          flex: 1;
+          display: flex;
+          margin: 30rpx;
+
+          .date {
+            padding: 0 20rpx;
+          }
+        }
+      }
+    }
+  }
+
+  // 班级资料
+  .class_public_data_tab {
+    margin: 30rpx;
+
+    .data_item {
+      background-color: #fff;
+      display: flex;
+      padding: 30rpx;
+      border-bottom: 1px solid rgb(245, 245, 245);
+      .left{
+        flex: 1;
+        width: 100%;
+        image{
+          width: 80%;
+        }
+      }
+      .right{
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+        .name{
+          display: flex;
+          justify-content: flex-end;
+          text{
+            color: rgb(88,107,149);
+            font-weight: 600;
+            flex: 6;
+          }
+          .collect{
+            flex: 0.7;
+            text-align: center;
+            color: #d81e06;
+            font-size: 60rpx;
+          }
+        }
+        .content{
+          display: flex;
+          flex-direction: column;
+          text{
+            margin: 20rpx 0;
+          }
+          .img{
+            image{
+              width: 100%;
+            }
+          }
+          .video{
+            video{
+              width: 100%;
+              position: relative;
+              z-index: 0;
+            }
+          }
+          .time{
+            color: rgb(175, 175, 175);
+            margin-top: 30rpx;
+          }
+        }
+      }
+    }
+
+
+  }
+
+  // 班级老师
+  .class_teacher_tab {
+    margin: 30rpx;
+    padding-bottom: 200rpx;
+
+    .teach_item navigator {
+      display: flex;
+      height: 200rpx;
+      background-color: #fff;
+      border-radius: 30rpx;
+      margin-bottom: 30rpx;
+
+      .teacher_icon {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        image {
+          width: 70%;
+        }
+      }
+
+      .msg {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+
+        .name {
+          flex: 1;
+          display: flex;
+          align-items: center;
+        }
+
+        // .phone {
+        //   flex: 1;
+        //   display: flex;
+        //   align-items: center;
+        // }
+      }
+
+    }
+    .btn{
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgb(245, 245, 245);
+      .quit_class{
+        text-align: center;
+        height: 100rpx;
+        line-height: 100rpx;
+        font-weight: 800;
+        font-size: 40rpx;
+        background-color: rgb(255, 100, 100);
+        color: #fff;
+        border-radius: 20rpx;
+        margin: 30rpx 50rpx;
+      }
+    }
+  }
+}

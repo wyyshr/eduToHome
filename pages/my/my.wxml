@@ -1,0 +1,36 @@
+<view class="my_page">
+  <!-- 用户信息 -->
+  <view class="user_info">
+    <view class="image">
+      <image class="" src="{{userInfo.avatarUrl}}" mode="widthFix" />
+    </view>
+    <view class="user_name">
+      <text class="username">{{userInfo.nickName}}</text>
+      <view class="phone">
+        <view class="iconfont icon-shouji"></view>
+        <text>{{phoneNum == 0?'暂无':phoneNum}}</text>
+      </view>
+    </view>
+    <text class="identify">身份：{{userId == 0?'老师' : '家长'}}</text>
+  </view>
+  <!-- 我的收藏 -->
+  <view class="my_collect">
+    <navigator url="/pages/myCollect/myCollect">
+      <view class="left iconfont icon-shoucang_"></view>
+      <view class="text">我的收藏</view>
+      <view class="right iconfont icon-youjiantou"></view>
+    </navigator>
+  </view>
+  <!-- 信息完善 -->
+  <view class="info">
+    <navigator url="/pages/fillInfo/fillInfo?id={{userId}}">
+      <view class="left iconfont icon-gerenxinxi-"></view>
+      <view class="text">信息完善</view>
+      <view class="right iconfont icon-youjiantou"></view>
+    </navigator>
+  </view>
+  <!-- 退出登录 -->
+  <view class="quit">
+    <view class="btn" bindtap="quit">退出登录</view>
+  </view>
+</view>

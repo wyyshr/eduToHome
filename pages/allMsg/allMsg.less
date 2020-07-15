@@ -1,0 +1,137 @@
+page {
+  background-color: rgb(245, 245, 245);
+}
+
+.allMsg_page {
+  margin: 30rpx;
+
+  // 班级页
+  .class_msg_page {
+    .class_item navigator {
+      height: 200rpx;
+      display: flex;
+      background-color: #fff;
+      justify-content: center;
+      align-items: center;
+      padding: 0 30rpx;
+      border-radius: 30rpx;
+      margin-bottom: 30rpx;
+
+      .img {
+        flex: 1;
+
+        image {
+          width: 60%;
+        }
+      }
+
+      .right {
+        flex: 2;
+
+        .num {
+          display: flex;
+          align-items: center;
+
+          .teach_num {
+            flex: 1;
+          }
+
+          .paren_num {
+            flex: 1;
+          }
+        }
+      }
+
+
+    }
+  }
+
+  // 老师页
+  .teacher_msg_page {
+    .teach_item navigator {
+      display: flex;
+      height: 200rpx;
+      background-color: #fff;
+      border-radius: 30rpx;
+      margin-bottom: 30rpx;
+
+      .teacher_icon {
+        flex: 1;
+
+        image {
+          width: 80%;
+        }
+      }
+
+      .msg {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+
+        .name {
+          flex: 1;
+          display: flex;
+          align-items: center;
+        }
+
+        .phone {
+          flex: 1;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+    }
+
+  }
+
+  // 资料页
+  .message_page {
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+
+    .msg_item {
+      width: 50%;
+      height: 350rpx;
+
+      navigator {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 350rpx;
+
+        .img {
+          width: 80%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 20rpx;
+
+          image {
+            width: 90%;
+          }
+        }
+
+        .title {
+          width: 80%;
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          font-size: 35rpx;
+          height: 100rpx;
+        }
+      }
+
+    }
+
+  }
+
+  // 更多页
+  .more_page{
+    text-align: center;
+  }
+}

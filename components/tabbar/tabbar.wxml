@@ -1,0 +1,6 @@
+<view class="tabbar">
+  <view class="tab_items" wx:for="{{tabItems}}">
+    <view class="tab_img"></view>
+    <view class="tab_txt"></view>
+  </view>
+</view>

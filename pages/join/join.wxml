@@ -1,0 +1,40 @@
+<view class="join_page">
+  <view class="teacher_page" wx:if="{{id == 0}}">
+    <view class="input_class_num">
+      <input bindinput="inputClass" placeholder="请输入班级名" />
+    </view>
+    <view class="btn">
+      <view class="create_class" bindtap="creatClass">创建班级</view>
+      <view class="join_class" bindtap="joinClass">加入班级</view>
+    </view>
+  </view>
+  <view class="parent_page" wx:else>
+    <view class="input_class_num">
+      <input bindinput="inputClass" placeholder="请输入班级名" />
+    </view>
+    <view class="btn">
+      <view class="join_class" bindtap="joinClass">加入班级</view>
+    </view>
+  </view>
+  <!-- 班级列表 -->
+  <view class="class_arr">
+    <view class="alreadyJoin">
+      <navigator url="/pages/home/home" open-type="switchTab">已加入班级？直接进入</navigator>
+    </view>
+    <!-- <view class="oready_class_title">已有班级：</view> -->
+    <view class="class_items" wx:for="{{classArr}}" wx:key="id">
+      <navigator class="navg" url="/pages/class/class?cid={{item.classId}}&cname={{item.className}}">
+        <view class="class_name">
+          <view class="img">
+            <image class="" src="/img/classIcon.png" mode="widthFix" />
+          </view>
+          <text>班级名：{{item.className}}</text>
+        </view>
+        <!-- <view class="num">
+          <view class="tea_num">教师：{{item.teac}}人</view>
+          <view class="pare_num">家长：{{item.num}}人</view>
+        </view> -->
+      </navigator>
+    </view>
+  </view>
+</view>

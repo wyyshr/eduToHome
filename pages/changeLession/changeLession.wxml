@@ -1,0 +1,23 @@
+<view class="change_lession_page">
+  <view class="lession_name">
+    <text >课名</text>
+    <input type="text" value="{{lession.value}}" placeholder="未填写" disabled="{{userId == 1}}" bindinput="lessionInput"/>
+  </view>
+  <view class="content">
+    <view class="week_day">
+      <text >周数</text>
+      <input type="text" value="{{lession.week}}" disabled/>
+    </view>
+    <view class="lession_time">
+      <text >节数</text>
+      <input type="text" value="{{lession.lession}}" disabled/>
+    </view>
+    <view class="teacher_name">
+      <text >老师</text>
+      <input type="text" bindinput="teacherInput" value="{{lession.teacherName != ''?lession.teacherName:''}}" disabled="{{userId == 1}}" placeholder="暂无老师名~"/>
+    </view>
+  </view>
+  <view class="submit" hidden="{{userId == 1}}">
+    <view class="sure" bindtap="sure">确认{{lession.value == ""?'添加':'修改'}}</view>
+  </view>
+</view>

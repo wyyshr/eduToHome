@@ -1,0 +1,22 @@
+<view class="teacher_detail_page">
+  <view class="top">
+    <view class="teacher_icon">
+      <image src="{{url}}" mode="widthFix" />
+    </view>
+    <view class="username">{{name}}</view>
+  </view>
+  <view class="msg">
+    <view class="name">姓名：{{parentInfo.parentName}}</view>
+    <view class="phone">
+      电话：{{parentInfo.iphone}}
+    </view>
+    <view class="personal_msg">孩子：
+      {{parentInfo.childName}}
+    </view>
+  </view>
+  <view class="btn">
+    <navigator url="/pages/sendMsg/sendMsg?name={{name}}">
+      <view class="send" bindtap="sendMsg">发消息</view>
+    </navigator>
+  </view>
+</view>

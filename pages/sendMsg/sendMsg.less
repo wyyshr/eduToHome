@@ -1,0 +1,147 @@
+page {
+  background-color: rgb(237, 237, 237);
+  height: 100%;
+}
+
+.send_msg_page {
+  height: 100%;
+
+  .scroll {
+    height: ~'calc(100vh - 150rpx)';
+    // padding-bottom: 200rpx;
+    .nav_bar {
+
+      // 左侧
+      .msg_item .left_msg {
+        display: flex;
+        align-items: flex-start;
+        width: 93%;
+        margin: 30rpx;
+
+        .img {
+          display: inline-block;
+          width: 100rpx;
+          // background-color: #fff;
+          border-radius: 20rpx;
+          text-align: center;
+          vertical-align: middle;
+
+          image {
+            width: 100%;
+          }
+        }
+
+        .text_nav {
+          display: inline-block;
+          display: flex;
+          align-items: flex-start;
+
+          .left {
+            display: inline-block;
+            width: 50rpx;
+            text-align: right;
+
+            image {
+              width: 50%;
+            }
+          }
+
+          .text {
+            background-color: #fff;
+            border-radius: 20rpx;
+            display: inline-block;
+            max-width: 450rpx;
+            padding: 30rpx;
+            word-wrap: break-word
+          }
+        }
+      }
+
+      // 右侧
+      .msg_item .right_msg {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        width: 93%;
+        margin: 30rpx;
+        float: right;
+
+        .img {
+          display: inline-block;
+          width: 100rpx;
+          // background-color: #fff;
+          border-radius: 20rpx;
+          text-align: center;
+          vertical-align: middle;
+
+          image {
+            width: 100%;
+          }
+        }
+
+        .text_nav {
+          display: inline-block;
+          display: flex;
+          align-items: flex-start;
+
+          .left {
+            display: inline-block;
+            width: 50rpx;
+            text-align: left;
+
+            image {
+              width: 50%;
+            }
+          }
+
+          .text {
+            background-color: rgb(149, 236, 105);
+            border-radius: 20rpx;
+            display: inline-block;
+            max-width: 450rpx;
+            padding: 30rpx;
+            word-wrap: break-word
+          }
+        }
+      }
+      .msg_item .send_time{
+        text-align: center;
+        color: rgb(173, 173, 173);
+        font-size: 32rpx;
+      }
+    }
+  }
+
+
+
+  .input_nav {
+    background-color: rgb(246, 246, 246);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+
+    textarea {
+      background-color: #fff;
+      min-height: 45rpx;
+      margin: 20rpx;
+      padding: 20rpx;
+      flex: 4;
+    }
+
+    .btn {
+      background-color: rgb(6, 192, 95);
+      flex: 1;
+      border-radius: 10rpx;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20rpx 20rpx;
+      padding: 10rpx;
+      height: 70rpx;
+    }
+  }
+}
